@@ -6,7 +6,7 @@
 #    By: mseinic <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/08 13:27:27 by mseinic           #+#    #+#              #
-#    Updated: 2018/01/08 13:42:18 by mseinic          ###   ########.fr        #
+#    Updated: 2018/01/09 14:58:28 by mseinic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS = -Wall -Werror -Wextra
 
 NAME = phonebook
 
-SRC = main.cpp 	Contact.class.cpp
+SRC = main.cpp 	Contact.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

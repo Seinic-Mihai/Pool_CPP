@@ -6,7 +6,7 @@
 #    By: mseinic <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/08 13:27:27 by mseinic           #+#    #+#              #
-#    Updated: 2018/01/09 14:48:44 by mseinic          ###   ########.fr        #
+#    Updated: 2018/01/09 15:39:08 by mseinic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ COMPILER = clang++
 
 FLAGS = -Wall -Werror -Wextra
 
-NAME = megaphone
+NAME = pony
 
-SRC = megaphone.cpp
+SRC = main.cpp 	Pony.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

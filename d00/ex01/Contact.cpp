@@ -6,11 +6,11 @@
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 11:28:05 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/08 15:24:00 by mseinic          ###   ########.fr       */
+/*   Updated: 2018/01/09 14:46:45 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(void)
 {

@@ -6,7 +6,7 @@
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 10:20:30 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/08 11:22:52 by mseinic          ###   ########.fr       */
+/*   Updated: 2018/01/09 14:52:12 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void    ft_print_upper(char *str)
 int main(int ac, char** av)
 {
     int i;
-    char    *str;
 
     i = 1;
     if (ac > 1)
@@ -39,7 +38,7 @@ int main(int ac, char** av)
         while (i < ac - 1)
         {
             ft_print_upper(av[i]);
-            ft_print((char*)" ");
+            putchar(' ');
             i++;
         }
         ft_print_upper(av[i]);

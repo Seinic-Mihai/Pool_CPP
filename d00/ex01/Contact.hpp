@@ -6,12 +6,12 @@
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 11:24:38 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/08 15:23:57 by mseinic          ###   ########.fr       */
+/*   Updated: 2018/01/09 15:19:00 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef CONTACT_H
+# define CONTACT_H
 
 #include <iostream>
 #include <iomanip>

@@ -6,11 +6,11 @@
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:58:52 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/08 15:23:58 by mseinic          ###   ########.fr       */
+/*   Updated: 2018/01/09 14:46:13 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 void    ft_add(Contact *book)
 {
@@ -52,16 +52,18 @@ int     main(void)
     Contact         book[8];
     std::string     cmd;
 
-    while (cmd != "EXIT")
+    std::cout << "Enter a command: ";
+    while ( std::getline(std::cin, cmd))
     {
-        std::cout << "Enter a command: ";
-        std::getline(std::cin, cmd);
+        if (cmd == "EXIT")
+            break;
         if (cmd == "ADD")
             ft_add(book);
         else if (cmd == "SEARCH")
             ft_search(book);
         else if (cmd != "" && cmd != "EXIT")
             std::cout << "Please enter a valid command (ADD, SEARCH, EXIT)" << std::endl;
+        std::cout << "Enter a command: ";
     }
     return (0);
 }
