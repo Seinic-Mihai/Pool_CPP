@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 14:33:25 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 15:16:55 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie(void)
+HumanB::HumanB(std::string str): name(str), weapon(NULL)
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
+    return ;
+}
+
+HumanB::~HumanB(void)
+{
     return;
 }
 
-Zombie::~Zombie(void)
+void    HumanB::setWeapon(Weapon & type)
 {
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
+    weapon = &type;
     return;
 }
 
-void    Zombie::announce(void)
+void    HumanB::attack()
 {
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
+    if (weapon)
+    {
+        std::cout << name << " attacks with his " << weapon->getType() << std::endl;
+    }
     return;
 }

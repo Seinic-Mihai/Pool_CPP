@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 14:26:07 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 15:16:57 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_H
+# define HUMANB_H
 
-Zombie::Zombie(void)
-{
-    std::cout << "A zombie is born from death !!!!" << std::endl;
-    return;
-}
+#include "Weapon.hpp"
 
-Zombie::~Zombie(void)
+class   HumanB
 {
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
-    return;
-}
+    public:
+        HumanB(std::string str);
+        ~HumanB(void);
 
-void    Zombie::announce(void)
-{
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
-}
+        std::string name;
+        Weapon*     weapon;
+
+
+        void        setWeapon(Weapon & type);
+        void        attack(void);
+};
+
+#endif

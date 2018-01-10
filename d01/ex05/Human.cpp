@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 10:59:48 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 11:11:30 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Human.hpp"
 
-Zombie::Zombie(void)
+Human::Human(void)
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
     return;
 }
 
-Zombie::~Zombie(void)
+Human::~Human(void)
 {
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
     return;
 }
 
-void    Zombie::announce(void)
+Brain const & Human::getBrain(void)
 {
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
+    return (self);
+}
+
+std::string Human::identify(void)
+{
+    return (self.identify());
 }

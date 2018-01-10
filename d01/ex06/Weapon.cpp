@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 14:21:30 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 15:09:15 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie(void)
+Weapon::Weapon(void)
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
+    type = "Null";
     return;
 }
 
-Zombie::~Zombie(void)
+Weapon::Weapon(std::string str_type)
 {
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
+    type = str_type;
     return;
 }
 
-void    Zombie::announce(void)
+Weapon::~Weapon(void)
 {
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
     return;
+}
+
+std::string const & Weapon::getType(void)
+{
+    return (type);
+}
+
+void    Weapon::setType(std::string str_type)
+{
+    type = str_type;
 }

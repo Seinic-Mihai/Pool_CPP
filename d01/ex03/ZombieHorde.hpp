@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 09:17:15 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 10:41:30 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIEHORDE_H
+# define ZOMBIEHORDE_H
+
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
+class   ZombieHorde
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
-    return;
-}
+    public:
+        ZombieHorde(int nb);
+        ~ZombieHorde(void);
 
-Zombie::~Zombie(void)
-{
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
-    return;
-}
+        Zombie* zombie_horde;
+        int     zombie_nb;
 
-void    Zombie::announce(void)
-{
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
-}
+        void    announce(void);
+};
+
+#endif

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 09:35:39 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 10:41:55 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ZombieHorde.hpp"
+#include <ctime>
 
-Zombie::Zombie(void)
+int main(void)
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
-    return;
-}
+    std::srand(std::time(0));
+    ZombieHorde     horde(10);
 
-Zombie::~Zombie(void)
-{
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
-    return;
-}
-
-void    Zombie::announce(void)
-{
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
+    horde.announce();
+    return (0);
 }

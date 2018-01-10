@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 10:52:38 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 11:11:28 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Brain.hpp"
 
-Zombie::Zombie(void)
+Brain::Brain(void)
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
     return;
 }
 
-Zombie::~Zombie(void)
+Brain::~Brain(void)
 {
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
     return;
 }
 
-void    Zombie::announce(void)
+std::string Brain::identify() const
 {
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
+    std::stringstream   str;
+
+    str << this;
+    return (str.str());
 }

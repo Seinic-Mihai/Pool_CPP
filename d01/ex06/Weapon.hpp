@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseinic <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/09 16:30:48 by mseinic           #+#    #+#             */
-/*   Updated: 2018/01/10 09:17:07 by mseinic          ###   ########.fr       */
+/*   Created: 2018/01/10 14:15:31 by mseinic           #+#    #+#             */
+/*   Updated: 2018/01/10 14:43:13 by mseinic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_H
+# define WEAPON_H
+#include <iostream>
 
-Zombie::Zombie(void)
+class Weapon
 {
-    std::cout << "A zombie is born from death !!!!" << std::endl;
-    return;
-}
+    public:
+        Weapon(void);
+        Weapon(std::string str_type);
+        ~Weapon(void);
 
-Zombie::~Zombie(void)
-{
-    std::cout << "A zombie was killed !!! Thanks GOD." << std::endl;
-    return;
-}
+        std::string         type;
+        std::string const & getType(void);
+        void                setType(std::string str_type);
+};
 
-void    Zombie::announce(void)
-{
-    std::cout << "<" << name << " (" << type << ")> Braiiiiiiinnnssss..." << std::endl;
-    return;
-}
+#endif
